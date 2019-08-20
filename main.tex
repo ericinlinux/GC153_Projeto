@@ -5,7 +5,8 @@
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
+\usepackage{bibentry}
+\nobibliography*
 
 \usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{setspace}
@@ -32,15 +33,18 @@ pdfproducer={PDFLaTeX},%
 
 
 \begin{document}
-\homework{Orientações para o Projeto da Disciplina}{2019-2}{Eric Fernandes de Mello Araújo}{Versão: \today}{Student name(s)}{NetId(s)}
+\homework{Orientações para o Projeto da Disciplina}{2019-2}{Eric Fernandes de Mello Araújo}{Versão: \today}{GCC153}{NetId(s)}
 
 \textbf{Instruções importantes}: Leia todas as instruções cuidadosamente antes de começar o seu projeto e antes de submeter no Campus Virtual.
 \begin{itemize}
-    \item Escreva o projeto em \LaTeX. Use o modelo fornecido neste documento e inclua seu nome e sua matrícula. 
+    \item Escreva o projeto em \LaTeX. Use o modelo fornecido neste documento e inclua seu nome e sua matrícula.
+    \item Todo o código criado durante a disciplina deve estar em um repositório do Github e referenciado no projeto.
     \item Todas as etapas terão como prazo final para a entrega a meia noite do dia definido, segundo cronograma a seguir.
     \item Entregas fora do prazo acarretarão em redução de 10\% na nota para cada dia de atraso.
     \item Os projetos serão feitos individualmente.
     \item Todas as fontes consultadas deverão ser citadas.
+    \item Todos os slides da sua apresentação devem ser enviados pelo Campus Virtual antes do horário de início das apresentações. A não entrega acarretará na perda de 10\% da nota de apresentações. 
+    \item Todos os trabalhos serão checados por plágio. Caso existam cópias de textos de outros colegas ou de terceiros, um processo administrativo será instaurado para apurar e punir o estudante que infringir este código de ética.
 \end{itemize}
 
 \section*{Descrição}
@@ -81,46 +85,110 @@ Apresentações & Apresentações dos resultados obtidos nas etapas do projeto. 
 
 \problem{1: Definição do problema e coleta dos dados}{10}
 
-Cada projeto deverá explorar um problema diferente que possa ser resolvido utilizando as técnicas ensinadas no curso. Para auxiliar na definição dos problemas, segue uma lista de tópicos que podem ser abordados no curso:
+Cada projeto deverá explorar um problema que possa ser resolvido utilizando as técnicas ensinadas no curso. Para auxiliar na definição dos problemas, veja a lista de tópicos no repositório \url{https://github.com/ericinlinux/GC153_Projeto}
+
+Nesta primeira etapa cada aluno irá definir um problema que deseja resolver. A partir do problema, deverá responder às seguintes perguntas:
+
+\begin{enumerate}
+    \item Qual a base de dados necessária para estudar o problema selecionado?
+    \item Como será feita a coleta dos dados?
+    \item Caso os dados já estejam disponíveis, qual a característica dos dados e como eles podem te ajudar em seu projeto?
+    \item Qual será o tempo necessário para coletar os dados para uso em seu problema? (caso sejam dados da web)
+    \item Quais ferramentas serão utilizadas para extração dos dados e para armazenamento?
+    \item Qual a quantidade de dados necessária para se ter uma boa qualidade nos resultados?
+    \item Qual a tarefa do meu problema?
+    \item Quais as técnicas serão utilizadas para resolver o problema?
+\end{enumerate}
+
+Especifique as características dos dados coletados, os atributos dos dados, o espaço necessário para armazenamento e outras informações que sejam relevantes para entender o processo de coleta.
+
+Também deixe claro qual o problema que está explorando. Defina o problema deixando claro:
+
+\begin{itemize}
+    \item O contexto do problema;
+    \item Por que o problema é relevante?
+    \item Outras tentativas de solucionar o mesmo problema por outros pesquisadores;
+    \item Quais os ganhos que a solução do problema pode trazer;
+    \item Quem são os interessados na solução do problema.
+\end{itemize}
+
+Esta etapa deverá ser entregue seguindo os prazos e formatos apresentados acima. Espera-se que nesta etapa contribuições para as seções de \textbf{Introdução} e de \textbf{Metodologia}.
 
 
 
-
-
-\subproblem{a} Write your solution here
-
-\subproblem{b} 
-
-\subproblem{c} 
-
-\subproblem{d} 
-
-% Comment: In the objective, we wrote ``Practice writing proofs'' but this is rather simple and not very rigorous?
 
 \newpage
-\problem{2: Decision Trees, Overfitting}{5+5+10+5+10+10=45}
+\problem{2: Seleção, pré-processamento e transformação dos dados}{10}
 
-\subproblem{a}
+Com os dados em mãos, a próxima etapa é definir a forma de tratamento dos dados para uso no algoritmo a ser desenvolvido.
 
-\subproblem{b} 
+Nesta etapa deverão ser respondidas as seguintes perguntas:
 
-\subproblem{c}
+\begin{enumerate}
+    \item Qual o procedimento para limpeza dos dados? Houve necessidade da execução de algumas das tarefas abaixo?
+    \begin{itemize}
+        \item Limpeza dos dados;
+        \item Integração dos dados;
+        \item Transformação dos dados;
+        \item Redução dos dados.
+    \end{itemize}
+    \item Explique cada uma das atividades acima com detalhes sobre o que foi feito e os motivos para a decisão de fazer.
+\end{enumerate}
 
-\subproblem{d} 
+Esta etapa comporá a seção de \textbf{metodologia} do seu artigo. Crie subseções organizadas explicando cada etapa do processo em detalhes e em ordem, para que o leitor tenha condições de replicar o mesmo método que foi usado em sua base de dados.
 
-\includegraphics[width=0.5\textwidth]{example-image-a}
+%\newpage
+\problem{3: Mineração e avaliação dos resultados}{35}
 
-\subproblem{e} 
+Esta etapa consiste da implementação, execução, refinamento e análise dos resultados da mineração dos dados coletados ou selecionados.
 
-\includegraphics[width=0.5\textwidth]{example-image-b}
 
-\subproblem{f}
+Os resultados obtidos nesta etapa comporão as seções \textbf{Resultados} e \textbf{Discussão}. Portanto, a versão final destas seções deve ser entregue nesta etapa.
 
-\includegraphics[width=0.5\textwidth]{example-image-c}
 
-\newpage
-\problem{3: Hypothesis Testing}{15+10=25}
-\subproblem{a}
+\problem{Bibliografia I}{5}
 
-\subproblem{b}
+As etapas de Bibliografia serão importantes para a formatação do referencial teórico de seu trabalho. Desta forma, serão passados 4 (quatro) artigos nesta etapa para a leitura, resenha e composição da relação entre os assuntos tratados nos artigos e o trabalho que você está desenvolvendo.
+
+Os artigos a serem lidos são:
+
+\begin{enumerate}
+    \item \bibentry{jothi2015data}
+    \item \bibentry{fayyad1996data}
+    \item \bibentry{camilo2009mineraccao}
+    \item \bibentry{galvao2009tecnica}
+\end{enumerate}
+
+As referências podem ser encontradas no Campus Virtual. Existe um quinto artigo que deverá ser lido para a tomada de decisão do algoritmo a ser aplicado ao problema e não é obrigatório para esta entrega:
+
+\begin{itemize}
+    \item \bibentry{wu2008top}
+\end{itemize}
+
+
+\problem{Bibliografia II}{10}
+
+A Bibliografia I será avaliada, e as alterações solicitadas devem estar presente nesta etapa. A não alteração e melhoria da Bibliografia I impedirá a avaliação da segunda etapa.
+
+Nesta etapa, cada aluno lerá duas bibliografias fixas e mais 5 (cinco) bibliografias à sua escolha e relacionadas ao projeto que estão desenvolvendo. A leitura resultará em uma complementação da seção de \textbf{Referencial Teórico} e \textbf{Trabalhos Relacionados}.
+
+As bibliografias obrigatórias são:
+
+\begin{enumerate}
+    \item \bibentry{wu2008top}
+    \item \bibentry{allahyari2017brief}
+\end{enumerate}
+
+A versão final das seções \textbf{Referencial Teórico} e \textbf{Trabalhos Relacionados} deverão ser entregues nesta etapa.
+
+\problem{Apresentações}{10}
+
+Cada aluno irá fazer 3 apresentações referentes a cada etapa do projeto. Espera-se que as apresentações das etapas 1 e 2 sejam de 5 (cinco) minutos, com 5 (cinco) minutos para debates. Na etapa 3 as apresentações serão de 10 (dez) minutos.
+
+As etapas 1 e 2 podem ser utilizadas para expor ideias, decisões a serem tomadas no projeto e potenciais dificuldades e oportunidades no trabalho.
+
+A etapa 3 deverá apresentar o resultado final do projeto, com as análises dos dados e os desdobramentos das descobertas feitas.
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
 \end{document} 
